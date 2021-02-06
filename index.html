@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> random forest </title>
+    <style> 
+    body {background-color: powderblue;}
+    center {
+    color: blue;
+     font-family: "Times New Roman", Times, serif;
+      font-size: 300%}
+    
+    </style>
+    
+</head>
+<body>
+    <div class ='login'><center>
+        <h1> Admit prediction</h1></center>
+        <form action = "{{ url_for('predict')}}" method="post">
+            
+            <input type="text" name = "GRE" placeholder="GRE" required="required" />
+            <input type="text" name = "TOFEL" placeholder="TOFEL" required="required"/>
+            <input type="text" name = "Univ_Rating" placeholder="Univ_Rating" required="required"/>
+            <input type="text" name = "CGPA" placeholder="CGPA" required="required"/>
+            <button type="submit" class = "btn btn-primary btn-block btn-large">predict</button>
+            
+        </form>
+        <br>
+        <br>
+        <center>
+        {{ predict_text }} </center>
+        
+    </div>
+</body>
+</html>
